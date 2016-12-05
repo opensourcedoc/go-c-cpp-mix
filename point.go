@@ -1,6 +1,11 @@
 package point
 
-// #include "point.h"
+/*
+#cgo CXXFLAGS: -std=c++11
+#cgo LDFLAGS: -lstdc++
+
+#include "point.h"
+*/
 import "C"
 
 import "fmt"
@@ -11,16 +16,20 @@ type Point struct {
 
 func Init(x C.double, y C.double) *Point {
   p := new(Point)
-  p.pt = C.pointNew(x, y)
+  p.pt = C.point_new(x, y)
   return p
 }
 
 func (p *Point) GetX() C.double {
-  return C.pointGetX(p.pt)
+  return C.point_get_x(p.pt)
 }
 
 func (p *Point) GetY() C.double {
-  return C.pointGetY(p.pt)
+  return C.point_get_y(p.pt)
+}
+
+func (p *Point) Free() {
+	C.point_free(p.pt)
 }
 
 func (p *Point) ToString() string {
