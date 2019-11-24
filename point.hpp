@@ -1,16 +1,13 @@
-#ifndef POINT_HPP
-#define POINT_HPP
+#pragma once
 
 #ifdef __cplusplus
 class Point {
-private:
-  double x;
-  double y;
 public:
-  Point(double, double);
-  double getX();
-  double getY();
+    Point(double, double);
+    double x();
+    double y();
+private:
+    double _x;
+    double _y;
 };
-#endif
-
 #endif

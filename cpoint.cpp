@@ -6,17 +6,17 @@ CPoint point_new(double x, double y)
   return (CPoint) new Point(x, y);
 }
 
-double point_get_x(CPoint p)
+double point_x(CPoint p)
 {
-  return ((Point*) p)->getX();
+  return ((Point*) p)->x();
 }
 
-double point_get_y(CPoint p)
+double point_y(CPoint p)
 {
-  return ((Point*) p)->getY();
+  return ((Point*) p)->y();
 }
 
-void point_free(CPoint p)
+void point_delete(void *p)
 {
-  delete (Point*) p;
+  delete ((Point*) p);
 }

@@ -8,10 +8,12 @@ typedef void* CPoint;
 #ifdef __cplusplus
 extern "C" {
 #endif
-  CPoint point_new(double, double);
-  double point_get_x(CPoint p);
-  double point_get_y(CPoint p);
-  void point_free(CPoint p);
+
+CPoint point_new(double, double);
+double point_x(CPoint p);
+double point_y(CPoint p);
+void point_delete(CPoint p);
+
 #ifdef __cplusplus
 }
 #endif

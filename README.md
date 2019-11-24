@@ -1,7 +1,9 @@
-# 在 Go 語言中使用 C++ class
+# Using C++ class in Golang
 
-**警告** 本程式以 Valgrind 實測可能有 memory leak，僅供參考。
+**Warning** The sample program may have memory leak. Use it with caution.
 
-Go 語言可以藉由 cgo 使用 C 語言的函式；然而，cgo 無法直接使用 C++ 程式碼，所以，要將 C++ 函式和物件轉為 C 的型別。
+Golang programs can utilize C functions through cgo. Nevertheless, cgo cannot access C++ code base. To utilize C++ code base in Golang, we have to wrap C++ code with C.
 
-本範例簡單示範如何在 Go 語言中使用 C++ class。
+Here is a small sample to show such usage.
+
+Copyright 2019, Michael Chen; licensed under Apache 2.0.

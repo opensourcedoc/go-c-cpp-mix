@@ -2,16 +2,16 @@ package main
 
 import (
 	"fmt"
-	"log"
 	point "go-c-cpp-mix"
+	"log"
 	"runtime"
 )
 
 func main() {
 	for i := 0; i < 10; i++ {
-		p := point.Init(3, 4)
-		fmt.Println(p.ToString())
-		point.Free(p)
+		p := point.NewPoint(3, 4)
+		fmt.Println(p.String())
+		point.Delete(p)
 		runtime.GC()
 
 		var mem runtime.MemStats

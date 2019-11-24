@@ -2,16 +2,16 @@
 
 Point::Point(double x, double y)
 {
-  this->x = x;
-  this->y = y;
+  this->_x = x;
+  this->_y = y;
 }
 
-double Point::getX()
+double Point::x()
 {
-  return this->x;
+  return this->_x;
 }
 
-double Point::getY()
+double Point::y()
 {
-  return this->y;
+  return this->_y;
 }
