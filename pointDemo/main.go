@@ -1,24 +1,19 @@
 package main
 
 import (
-	"fmt"
-	point "go-c-cpp-mix"
+	"go-c-cpp-mix/point"
 	"log"
-	"runtime"
 )
 
 func main() {
-	for i := 0; i < 10; i++ {
-		p := point.NewPoint(3, 4)
-		fmt.Println(p.String())
-		point.Delete(p)
-		runtime.GC()
+	p := point.NewPoint(0.0, 0.0)
+	q := point.NewPoint(3.0, 4.0)
 
-		var mem runtime.MemStats
-		runtime.ReadMemStats(&mem)
-		log.Println(mem.Alloc)
-		log.Println(mem.TotalAlloc)
-		log.Println(mem.HeapAlloc)
-		log.Println(mem.HeapSys)
+	dist := point.Distance(p, q)
+	if 5 != dist {
+		log.Fatal("Wrong distance")
 	}
+
+	p.Delete()
+	q.Delete()
 }
