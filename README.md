@@ -6,4 +6,4 @@ Here is a small sample to show such usage.
 
 ## Copyright
 
-Copyright (c) 2019-2020, Michael Chen. Licensed under Apache 2.0.
+Copyright (c) 2019-2020, Michelle Chen. Licensed under Apache 2.0.
